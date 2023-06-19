@@ -33,22 +33,22 @@ class IObserver;
 // Create subject interface
 class ISubject {
  public:
-  ISubject() = default;
-  virtual ~ISubject() = default;
-
   virtual void AddObserver(IObserver* observer) = 0;
   virtual void RemoveObserver(IObserver* observer) = 0;
 
   virtual void Notify(void) = 0;
+
+ protected:
+  virtual ~ISubject() = default;
 };
 
 // Crete observer interface
 class IObserver {
  public:
-  IObserver() = default;
-  virtual ~IObserver() = default;
-
   virtual void Update(std::string_view operation, std::string_view record) = 0;
+
+ protected:
+  virtual ~IObserver() = default;
 };
 
 /*============================================================================*/
@@ -57,7 +57,9 @@ class IObserver {
 class Database final : public ISubject {
  public:
   Database() = default;
-  ~Database() = default;
+  Database(const Database&) = delete;
+  Database& operator=(const Database&) = delete;
+  ~Database() override = default;
 
   // ISubject
   void AddObserver(IObserver* observer) override {
@@ -96,7 +98,9 @@ class Database final : public ISubject {
 class Client final : public IObserver {
  public:
   Client() = default;
-  ~Client() = default;
+  Client(const Client&) = delete;
+  Client& operator=(const Client&) = delete;
+  ~Client() override = default;
 
   // IObserver
   void Update(std::string_view operation, std::string_view record) override {
@@ -108,7 +112,9 @@ class Client final : public IObserver {
 class Developer final : public IObserver {
  public:
   Developer() = default;
-  ~Developer() = default;
+  Developer(const Developer&) = delete;
+  Developer& operator=(const Developer&) = delete;
+  ~Developer() override = default;
 
   // IObserver
   void Update(std::string_view operation, std::string_view record) override {
@@ -120,7 +126,9 @@ class Developer final : public IObserver {
 class Boss final : public IObserver {
  public:
   Boss() = default;
-  ~Boss() = default;
+  Boss(const Boss&) = delete;
+  Boss& operator=(const Boss&) = delete;
+  ~Boss() override = default;
 
   // IObserver
   void Update(std::string_view operation, std::string_view record) override {
