@@ -4,7 +4,7 @@
 
 Design Pattern là một giải pháp tổng thể cho các vấn đề chung trong thiết kế phần mềm. Nó cũng tương tự các bản thiết kế cho xây dựng nhà cửa, chúng được dùng để giải quyết các vấn đề lặp đi lặp lại trong thiết kế của bạn.
 
-Các design pattern không thể copy rồi paste như cách bạn làm với các function có sẵn hay thư viện, vì chúng không phải là những đoạn code cụ thể. Design pattern ở đây là những khái niệm tổng quát để giải quyết các vấn đề riêng biệt. Bạn có thể tìm hiểu các design pattern và triển khai chúng lên ứng dụng của bạn. Các pattern thường bị nhầm lẫn với thuật toán, vì chúng đều là những khái niệm mô tả giải pháp cho một vấn đề nào đó.
+Các design pattern không thể copy rồi paste như cách bạn làm với các function có sẵn hay thư viện, vì chúng không phải là những đoạn code cụ thể. Design pattern ở đây là những khái niệm tổng quát để giải quyết các vấn đề riêng biệt. Bạn có thể tìm hiểu các design pattern và triển khai chúng lên ứng dụng của bạn. Các pattern thường bị nhầm lẫn với thuật toán, vì chúng đều là những khái niệm mô tả giải pháp cho một vấn đề nào đó. 
 
 Trong khi thuật toán là định nghĩa những hành động cụ thể để giải quyết vấn đề thì design pattern lại là một mô tả cao hơn cho các giải pháp. Code cho cùng một pattern có thể được triển khai trên hai ứng dụng khác nhau.
 
@@ -44,50 +44,51 @@ Tất cả các framework cho ứng dụng web như Laravel, Codeigniter… đ�
 Hệ thống các design pattern được chia thành 3 nhóm: nhóm Creational, nhóm Structural và nhóm Behavioral.
 
 - [**Creational Pattern**](./creational-pattern) cung cấp các cơ chế tạo đối tượng để tăng tính linh hoạt và tái sử dụng mã hiện có.
-  - [**Factory Method**](./creational-pattern/factory-method)
-  - [**Abstract Factory**](./creational-pattern/abstract-factory)
-  - [**Builder**](./creational-pattern/builder)
-  - [**Prototype**](./creational-pattern/prototype)
-  - [**Singleton**](./creational-pattern/singleton)
+    + [**Factory Method**](./creational-pattern/factory-method)
+    + [**Abstract Factory**](./creational-pattern/abstract-factory)
+    + [**Builder**](./creational-pattern/builder)
+    + [**Prototype**](./creational-pattern/prototype)
+    + [**Singleton**](./creational-pattern/singleton)
 - [**Structural Pattern**](./structural-pattern) giải thích cách tập hợp các đối tượng và lớp thành các cấu trúc lớn hơn, trong khi vẫn giữ cho cấu trúc linh hoạt và hiệu quả.
-  - [**Adapter**](./structural-pattern/adapter)
-  - [**Bridge**](./structural-pattern/bridge)
-  - [**Composite**](./structural-pattern/composite)
-  - [**Decorator**](./structural-pattern/decorator)
-  - [**Facade**](./structural-pattern/facade)
-  - [**Flyweight**](./structural-pattern/flyweight)
-  - [**Proxy**](./structural-pattern/proxy)
+    + [**Adapter**](./structural-pattern/adapter)
+    + [**Bridge**](./structural-pattern/bridge)
+    + [**Composite**](./structural-pattern/composite)
+    + [**Decorator**](./structural-pattern/decorator)
+    + [**Facade**](./structural-pattern/facade)
+    + [**Flyweight**](./structural-pattern/flyweight)
+    + [**Proxy**](./structural-pattern/proxy)
 - [**Behavioral Pattern**](./behavioral-pattern) quan tâm đến việc giao tiếp hiệu quả và phân công nhiệm vụ giữa các đối tượng.
-  - [**Chain Of Responsibility**](./behavioral-pattern/chain-of-responsibility)
-  - [**Command**](./behavioral-pattern/command)
-  - [**Iterator**](./behavioral-pattern/iterator)
-  - [**Mediator**](./behavioral-pattern/mediator)
-  - [**Memento**](./behavioral-pattern/memento)
-  - [**Observer**](./behavioral-pattern/observer)
-  - [**State**](./behavioral-pattern/state)
-  - [**Strategy**](./behavioral-pattern/strategy)
-  - [**Template Method**](./behavioral-pattern/template-method)
-  - [**Visitor**](./behavioral-pattern/visitor)
+    + [**Chain Of Responsibility**](./behavioral-pattern/chain-of-responsibility)
+    + [**Command**](./behavioral-pattern/command)
+    + [**Iterator**](./behavioral-pattern/iterator)
+    + [**Mediator**](./behavioral-pattern/mediator)
+    + [**Memento**](./behavioral-pattern/memento)
+    + [**Observer**](./behavioral-pattern/observer)
+    + [**State**](./behavioral-pattern/state)
+    + [**Strategy**](./behavioral-pattern/strategy)
+    + [**Template Method**](./behavioral-pattern/template-method)
+    + [**Visitor**](./behavioral-pattern/visitor)
 
 # Code Example
 
 Code ví dụ của RefactoringGuru
 
-|                                        | Ngôn ngữ   | Source Code                                                   |
-| -------------------------------------- | ---------- | ------------------------------------------------------------- |
-| ![csharp](./assets/csharp.png)         | C#         | https://github.com/RefactoringGuru/design-patterns-csharp     |
-| ![cpp](./assets/cpp.png)               | C++        | https://github.com/RefactoringGuru/design-patterns-cpp        |
-| ![go](./assets/go.png)                 | GO         | https://github.com/RefactoringGuru/design-patterns-go         |
-| ![java](./assets/java.png)             | JAVA       | https://github.com/RefactoringGuru/design-patterns-java       |
-| ![php](./assets/php.png)               | PHP        | https://github.com/RefactoringGuru/design-patterns-php        |
-| ![python](./assets/python.png)         | PYTHON     | https://github.com/RefactoringGuru/design-patterns-python     |
-| ![ruby](./assets/ruby.png)             | RUBY       | https://github.com/RefactoringGuru/design-patterns-ruby       |
-| ![swift](./assets/swift.png)           | SWIFT      | https://github.com/RefactoringGuru/design-patterns-swift      |
-| ![typescript](./assets/typescript.png) | TYPESCRIPT | https://github.com/RefactoringGuru/design-patterns-typescript |
+| | Ngôn ngữ | Source Code |
+|-|----------|-------------|
+|![csharp](./assets/csharp.png)| C# | https://github.com/RefactoringGuru/design-patterns-csharp |
+|![cpp](./assets/cpp.png)| C++ | https://github.com/RefactoringGuru/design-patterns-cpp |
+|![go](./assets/go.png)| GO | https://github.com/RefactoringGuru/design-patterns-go |
+|![java](./assets/java.png)| JAVA | https://github.com/RefactoringGuru/design-patterns-java |
+|![php](./assets/php.png)| PHP | https://github.com/RefactoringGuru/design-patterns-php |
+|![python](./assets/python.png)| PYTHON | https://github.com/RefactoringGuru/design-patterns-python |
+|![ruby](./assets/ruby.png)| RUBY | https://github.com/RefactoringGuru/design-patterns-ruby |
+|![swift](./assets/swift.png)| SWIFT | https://github.com/RefactoringGuru/design-patterns-swift |
+|![typescript](./assets/typescript.png)| TYPESCRIPT | https://github.com/RefactoringGuru/design-patterns-typescript |
+
 
 # Nguồn
 
-## Sách
+## Sách 
 
 ![book](./assets/book.png)
 
