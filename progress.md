@@ -1,1 +1,2 @@
-observer
+Observer
+Singleton
