@@ -7,6 +7,7 @@
 #include <iostream>
 #include <memory>
 #include <string_view>
+#include <mutex>
 
 class Database {
  public:
@@ -15,12 +16,14 @@ class Database {
   ~Database() = default;
 
   static Database* GetInstance(std::string_view name) {
+    locker_.lock();
     if (nullptr == instance_ptr_) {
       // Since the unique_ptr class is not a member of the Database class,
       // it is not possible to call the Database constructor in private
       // Here is a way to make unique_ptr callable to Database constructor
       instance_ptr_ = std::unique_ptr<Database>(new Database(name));
     }
+    locker_.unlock();
     // Cannot use std::move unique_ptr because it will assign instance_ptr_ = null_ptr
     return instance_ptr_.get();
   }
@@ -32,14 +35,20 @@ class Database {
   std::string_view GetName() const { return name_; }
 
  private:
+  explicit Database(std::string_view name) : name_{name} {}
+
   static std::unique_ptr<Database> instance_ptr_;
+
+  static std::mutex locker_;
+
   std::string_view name_;
 
-  explicit Database(std::string_view name) : name_{name} {}
 };
 
 // Static variables must be initialized outside the class area
 std::unique_ptr<Database> Database::instance_ptr_{nullptr};
+
+std::mutex Database::locker_; // lock multi threads
 
 int main() {
   const auto database1 = Database::GetInstance("Products");
