@@ -1,5 +1,5 @@
 /*
- * C++ Design Patterns: Observer
+ * C++ Design Patterns: Builder
  * Author: AnNT
  * 2023
  */
