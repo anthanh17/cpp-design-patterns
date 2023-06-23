@@ -25,7 +25,7 @@ class ElectronicProduct final {
   void SetLaptop(std::string_view laptop) { laptop_ = laptop; }
 
   void ShowInfor(void) {
-    std::cout << "\nPhone: " << phone_;
+    std::cout << "\nPhone : " << phone_;
     std::cout << "\nTablet: " << tablet_;
     std::cout << "\nScreen: " << screen_;
     std::cout << "\nLaptop: " << laptop_;
@@ -126,14 +126,16 @@ int main() {
   std::unique_ptr<IShopBuilder> hcm_shop = std::make_unique<HcmShop>();
 
   std::unique_ptr<ContractorShop> hn_shop_ptr =
-      std::make_unique<ContractorShop>(hanoi_shop);
+      std::make_unique<ContractorShop>(std::move(hanoi_shop));
   std::unique_ptr<ContractorShop> hcm_shop_ptr =
-      std::make_unique<ContractorShop>(hcm_shop);
+      std::make_unique<ContractorShop>(std::move(hcm_shop));
 
+  std::cout << "Ha Noi Shop";
   hn_shop_ptr->BuildProduct();
   hn_shop_ptr->GetProduct()->ShowInfor();
 
   std::cout << "\n\n";
+  std::cout << "HCM Shop";
 
   hcm_shop_ptr->BuildProduct();
   hcm_shop_ptr->GetProduct()->ShowInfor();
