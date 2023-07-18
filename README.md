@@ -43,7 +43,7 @@ Tất cả các framework cho ứng dụng web như Laravel, Codeigniter… đ�
 
 Hệ thống các design pattern được chia thành 3 nhóm: nhóm Creational, nhóm Structural và nhóm Behavioral.
 
-- [**Creational Pattern**](./creational-pattern) cung cấp các cơ chế tạo đối tượng để tăng tính linh hoạt và tái sử dụng mã hiện có.
+- [**Creational Pattern**](./tree/main/creational-patterns) cung cấp các cơ chế tạo đối tượng để tăng tính linh hoạt và tái sử dụng mã hiện có.
     + [**Factory Method**](./creational-pattern/factory-method)
     + [**Abstract Factory**](./creational-pattern/abstract-factory)
     + [**Builder**](./creational-pattern/builder)
